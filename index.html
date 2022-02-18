@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- navigation -->
+  <header>
+  <h1><a class="align-middle">Weather Dashboard</a></h1>
+  </header>
+
+  <main> 
+    <section class="search">
+        <h2>Search for a City</h2>
+        <form action="index.html">
+          <input type="text" id="city" name="city" /><br>
+          <input type="submit" value="Submit">
+        </form>
+        <div class="history">
+          
+        </div>
+    </section>
+  
+  <section class="forecast">
+    <section class="todays-forecast">
+      <h4><span id="searched-city"></span><span id="todays-date"></span></h4>
+      <ul class="todays-weather">
+        <li>
+          Temp: <span id="todays-temp"></span>
+        </li>
+        <li>
+          Wind: <span id="todays-wind"></span>
+        </li>
+        <li>
+          Humidity: <span id="todays-humidity"></span>
+        </li>
+        <li>
+          UV Index: <span id="uvindex"></span>
+      </li>
+    </ul>
+    </section>
+
+    <section>
+      <h3>5 Day Forecast:</h3>
+        <section class="fiveday">
+        <div id="day-one">
+          <ul class="five-weather">
+            <li>
+              Temp: <span id="1-temp"></span>
+            </li>
+            <li>
+              Wind: <span id="1-wind"></span>
+            </li>
+            <li>
+              Humidity: <span id="1-humidity"></span>
+            </li>
+          </ul>
+        </div>
+        <div id="day-two">
+          <ul class="five-weather">
+            <li>
+              Temp: <span id="2-temp"></span>
+            </li>
+            <li>
+              Wind: <span id="2-wind"></span>
+            </li>
+            <li>
+              Humidity: <span id="2-humidity"></span>
+            </li>
+          </ul>
+        </div>
+        <div id="day-three">
+          <ul class="five-weather">
+            <li>
+              Temp: <span id="3-temp"></span>
+            </li>
+            <li>
+              Wind: <span id="3-wind"></span>
+            </li>
+            <li>
+              Humidity: <span id="3-humidity"></span>
+            </li>
+          </ul>
+        </div>
+        <div id="day-four">
+          <ul class="five-weather">
+            <li>
+              Temp: <span id="4-temp"></span>
+            </li>
+            <li>
+              Wind: <span id="4-wind"></span>
+            </li>
+            <li>
+              Humidity: <span id="4-humidity"></span>
+            </li>
+          </ul>
+        </div>
+        <div id="day-five">
+          <ul class="five-weather">
+            <li>
+              Temp: <span id="5-temp"></span>
+            </li>
+            <li>
+              Wind: <span id="5-wind"></span>
+            </li>
+            <li>
+              Humidity: <span id="5-humidity"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </section>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
