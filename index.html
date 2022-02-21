@@ -18,10 +18,10 @@
   <main> 
     <section class="search">
         <h2>Search for a City</h2>
-        <form action="index.html">
+        <div>
           <input type="text" id="city" name="city" /><br>
-          <input type="submit" value="Submit">
-        </form>
+          <button onclick="apiCall()">Search</button>
+        </div>
         <div class="history">
           
         </div>
@@ -29,7 +29,7 @@
   
   <section class="forecast">
     <section class="todays-forecast">
-      <h4><span id="searched-city"></span><span id="todays-date"></span></h4>
+      <h4><span id="searched-city"></span> <span id="todays-date"></span></h4>
       <ul class="todays-weather">
         <li>
           Temp: <span id="todays-temp"></span>
@@ -42,8 +42,8 @@
         </li>
         <li>
           UV Index: <span id="uvindex"></span>
-      </li>
-    </ul>
+        </li>
+      </ul>
     </section>
 
     <section>
