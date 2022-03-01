@@ -22,18 +22,30 @@ function addHistory(){
 
 //API CALL
 function apiCall(){
+
+  //Getting the city entered
   var myCity = document.getElementById('city').value
   console.log(myCity)
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${myCity}&APPID=406e0928d4f7e01f9fc7227e0801a8e4`)
+  //Getting the city entered
+
+  //Fetching data and pushing data to HTML
+  fetch(`https://api.openweathermap.org/data/2.5/onecall?q=${myCity}&appid=406e0928d4f7e01f9fc7227e0801a8e4`)
   .then(response=> {
     return response.json();
   }).then(data =>{
     return document.getElementById('searched-city').innerHTML = myCity, 
     document.getElementById('todays-date').innerHTML = date, 
-    document.getElementById('todays-temp').innerHTML = data.main.temp, 
-    document.getElementById('todays-wind').innerHTML = data.wind.speed, 
-    document.getElementById('todays-humidity').innerHTML = data.main.humidity;
+    document.getElementById('todays-temp').innerHTML = data.current.temp, 
+    document.getElementById('todays-wind').innerHTML = data.current.wind_speed, 
+    document.getElementById('todays-humidity').innerHTML = data.current.humidity,
+    document.getElementById('uvindex').innerHTML = data.current.uvi,
+    document.getElementById('1-date').innerHTML = date, 
+    document.getElementById('1-temp').innerHTML = data.current.temp, 
+    document.getElementById('1-wind').innerHTML = data.current.wind_speed, 
+    document.getElementById('1-humidity').innerHTML = data.current.humidity,
+    document.getElementById('1-icon').innerHTML = data.main.icon;
   })
+  //Fetching data and pushing data to HTML
   
   addHistory()
 }
