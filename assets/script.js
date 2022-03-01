@@ -35,7 +35,7 @@ function apiCall(){
   }).then(data =>{
     return document.getElementById('searched-city').innerHTML = myCity, 
     document.getElementById('todays-date').innerHTML = date, 
-    document.getElementById('todays-temp').innerHTML = data.current.temp, 
+    document.getElementById('todays-temp').innerHTML = data.main.temperature, 
     document.getElementById('todays-wind').innerHTML = data.current.wind_speed, 
     document.getElementById('todays-humidity').innerHTML = data.current.humidity,
     document.getElementById('uvindex').innerHTML = data.current.uvi,
