@@ -2,6 +2,25 @@ let searchedCity = document.getElementById("city")
 var today = new Date();
 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
+//HISTORY
+let cityHistory = []
+let historyHtml = document.getElementById("history")
+
+function addHistory(){
+  cityHistory.unshift(city.value);
+  console.log(cityHistory)
+  
+  city.value=''
+  historyHtml.innerHTML = ""
+  
+  for(let i = 0; i < cityHistory.length;i++){
+    historyHtml.innerHTML += "<li>" + cityHistory[i] + "</li>"
+  }
+
+}
+//HISTORY
+
+//API CALL
 function apiCall(){
   var myCity = document.getElementById('city').value
   console.log(myCity)
@@ -15,4 +34,7 @@ function apiCall(){
     document.getElementById('todays-wind').innerHTML = data.wind.speed, 
     document.getElementById('todays-humidity').innerHTML = data.main.humidity;
   })
+  
+  addHistory()
 }
+//API CALL
