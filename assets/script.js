@@ -29,7 +29,7 @@ function apiCall(){
   //Getting the city entered
 
   //Fetching data and pushing data to HTML
-  fetch(`https://api.openweathermap.org/data/2.5/onecall?q=${myCity}&appid=406e0928d4f7e01f9fc7227e0801a8e4`)
+  fetch(`https://api.openweathermap.org/data/2.5/onecall?q=${myCity}&APPID=406e0928d4f7e01f9fc7227e0801a8e4`)
   .then(response=> {
     return response.json();
   }).then(data =>{
